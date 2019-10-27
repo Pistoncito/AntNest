@@ -5,9 +5,9 @@ using UnityEngine;
 public abstract class Ant : MonoBehaviour
 {
 
-    int age;
-    float hunger;
-    float health;
+    protected int age;
+    protected float hunger;
+    protected float health;
 
     // Start is called before the first frame update
     public abstract void Start();
