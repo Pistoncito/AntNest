@@ -4,20 +4,7 @@ using UnityEngine;
 
 public class WorkerAnt : Ant
 {
-
-    private enum FSMGlobal
-    {
-        OUTSIDE,
-        INSIDE
-    }
-    private enum FSMInside
-    {
-        FOODFOUND,
-        FEROMONEFOUND,
-        SEARCHING,
-        BACK
-    }
-
+    FSMGlobal state = FSMGlobal.OUTSIDE;
     // Start is called before the first frame update
     override
     public void Start()
