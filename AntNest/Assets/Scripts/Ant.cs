@@ -40,8 +40,10 @@ public abstract class Ant : MonoBehaviour
     // Update is called once per frame
     public abstract void Update();
 
-    public void Behaviour()
+    [Task]
+    public virtual void Behaviour()
     {
+        
         if(hunger <= 0.0f)
         {
             health -= Time.deltaTime;
@@ -50,17 +52,24 @@ public abstract class Ant : MonoBehaviour
         if(health <= 0.0f)
         {
             Destroy(this);
+            Task.current.Fail();
         }
-        Debug.Log("Behaviour");
+   
+        Debug.Log("Behaviour padre");
+        Task.current.Succeed();
+
     }
+
     [Task]
     public virtual void isAlive()
     {
-       
+        Debug.Log("isAlive padre");
+        
         if(health <= 0.0f)
         {
             Task.current.Fail();
         }
+        
         Task.current.Succeed();
     }
 }

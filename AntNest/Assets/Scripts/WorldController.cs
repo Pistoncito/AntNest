@@ -1,10 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public enum AntKind
+{
+    QUEEN,
+    DRONE,
+    SOLDIER,
+    COLLECTOR,
+    NURSE
+}
+
 public class WorldController : MonoBehaviour
 {
+    private static WorldController instance_;
+    public static WorldController Instance_
+    {
+        get
+        {
+            return instance_;
+        }
+        set
+        {
+            if(instance_ != null)
+            {
+                instance_ = value;
+            }
+        }
+    }
     //Editor variables
-    public Ant antmolde;
+    public GameObject antmolde;
 
     //Camera
     public CameraMovement cam;
@@ -21,6 +46,7 @@ public class WorldController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance_ = this;
         ants = new List<Ant>();
         nests = new List<Nest>();
         outside = true;

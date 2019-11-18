@@ -1,5 +1,6 @@
 tree("Root")
 	while
-		isAlive()
 		Behaviour()
+		isAlive()
+		
 		

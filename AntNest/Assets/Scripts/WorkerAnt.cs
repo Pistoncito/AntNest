@@ -4,6 +4,7 @@ using UnityEngine;
 using Panda;
 public class WorkerAnt : Ant
 {
+    GameObject ant;
     FSMGlobal state;
     // Start is called before the first frame update
     override
@@ -13,7 +14,6 @@ public class WorkerAnt : Ant
         age = 0;
         hunger = 0;
         health = 100;
-        Behaviour();
     }
 
     // Update is called once per frame
@@ -22,26 +22,30 @@ public class WorkerAnt : Ant
     {
         
     }
+
     [Task]
+    override
     public void Behaviour()
     {
         base.Behaviour();
-        MoveRandom();
-        Task.current.Succeed();
+        Debug.Log("Behaviour hijo");
+        //MoveRandom();
+        //Task.current.Succeed();
     }
 
     [Task]
     public void MoveRandom()
     {
-        Debug.Log("fd");
-        Task.current.Succeed();
+        Debug.Log("MoveRandom");
+        //Task.current.Succeed();
     }
+
     [Task]
     override
     public void isAlive()
     {
+        base.isAlive();
         Debug.Log("isAlive hijo");
-      
     }
 
 }
