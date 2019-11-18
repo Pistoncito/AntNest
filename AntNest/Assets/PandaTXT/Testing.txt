@@ -1,0 +1,5 @@
+tree("Root")
+	while
+		isAlive()
+		Behaviour()
+		

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+using Panda;
 
 public abstract class Ant : MonoBehaviour
 {
@@ -11,6 +11,11 @@ public abstract class Ant : MonoBehaviour
     {
         OUTSIDE,
         INSIDE
+    }
+    public enum Feromone
+    {
+        FOOD,
+        THREAT
     }
     private enum FSMInside
     {
@@ -35,4 +40,27 @@ public abstract class Ant : MonoBehaviour
     // Update is called once per frame
     public abstract void Update();
 
+    public void Behaviour()
+    {
+        if(hunger <= 0.0f)
+        {
+            health -= Time.deltaTime;
+        }
+ 
+        if(health <= 0.0f)
+        {
+            Destroy(this);
+        }
+        Debug.Log("Behaviour");
+    }
+    [Task]
+    public virtual void isAlive()
+    {
+       
+        if(health <= 0.0f)
+        {
+            Task.current.Fail();
+        }
+        Task.current.Succeed();
+    }
 }

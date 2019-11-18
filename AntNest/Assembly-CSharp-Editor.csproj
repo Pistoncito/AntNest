@@ -60,21 +60,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\NPBehave\Editor\DebuggerEditor.cs" />
-    <Compile Include="Assets\NPBehave\Editor\DebuggerWindow.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\_utils\MockNode.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\_utils\Test.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\_utils\TestRoot.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\BlackboardTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\ClockTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\Composite\ParallelTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\Composite\RandomSelectorTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\Composite\RandomSequenceTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\Composite\SelectorTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\Composite\SequenceTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\Decorator\BlackboardQueryTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\Decorator\RepeaterTest.cs" />
-    <Compile Include="Assets\NPBehave\Editor\Tests\GeneralTest.cs" />
+    <Compile Include="Assets\PandaBehaviour\Core\Editor\CreatePandaScriptMenu.cs" />
+    <Compile Include="Assets\PandaBehaviour\Core\Editor\PandaBehaviourEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/victo/OneDrive/Documents/GitHub/AntNest/AntNest/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -317,6 +304,12 @@
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.0b7/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PandaBehaviour">
+      <HintPath>C:/Users/victo/OneDrive/Documents/GitHub/AntNest/AntNest/Assets/PandaBehaviour/Core/PandaBehaviour.dll</HintPath>
+    </Reference>
+    <Reference Include="PandaBehaviourEditor">
+      <HintPath>C:/Users/victo/OneDrive/Documents/GitHub/AntNest/AntNest/Assets/PandaBehaviour/Core/Editor/PandaBehaviourEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/Users/victo/OneDrive/Documents/GitHub/AntNest/AntNest/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>

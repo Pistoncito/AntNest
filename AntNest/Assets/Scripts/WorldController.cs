@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class WorldController : MonoBehaviour
 {
     //Editor variables
@@ -14,14 +13,16 @@ public class WorldController : MonoBehaviour
     bool outside;
 
     //Game Object lists 
-    List<Ant> ants = new List<Ant>();
-
+    List<Ant> ants;
+    List<Nest> nests;
     //Game parameters
     float temperature;
 
     // Start is called before the first frame update
     void Start()
     {
+        ants = new List<Ant>();
+        nests = new List<Nest>();
         outside = true;
         cam.goToSurface();
     }
